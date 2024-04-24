@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { PedidosPage } from './pages/Pedidos/PedidosPage';
+import { HeaderPartial } from './partials/HeaderPartial/HeaderPartial';
+import { SideBarPartial } from './partials/SidebarPartial/SidebarPartial';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <HeaderPartial className="header" />
+        <SideBarPartial className="sidebar" />
+        <div className='content'>
+          <Routes>
+            <Route path='/' element={<PedidosPage />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

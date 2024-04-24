@@ -1,0 +1,25 @@
+
+.sidebar {
+    border-right: 1px solid var(--gray-color);
+    box-shadow: 1px 0px 5px var(--gray-color);
+    height: 100%;
+}
+
+    .sidebar i {
+        text-align: center;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .sidebar i:hover {
+        color: #EF3F37;
+    }
+
+.selected {
+    background-color: var(--second-color);
+    color: var(--active-color);
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 32px;
+}
+

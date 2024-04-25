@@ -3,8 +3,8 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 
 export const ButtonOrder = ({ variant }) => {
-    let estilo = '';
-    let textButton = '';
+    let estilo;
+    let textButton;
 
     switch(variant){
         case 'wait':
@@ -19,6 +19,9 @@ export const ButtonOrder = ({ variant }) => {
             estilo = styles.orange
             textButton = "EM ENTREGA"
         break;
+        default:
+            estilo = '';
+            textButton = '';
     }
 
     return (

@@ -1,5 +1,4 @@
 import styles from './PedidosPage.module.css'
-import { RxUpdate } from "react-icons/rx";
 import { IoMdSettings } from "react-icons/io";
 import { Col, Row } from 'react-bootstrap';
 import { OrderCard } from '../../components/OrderCard/OrderCard';
@@ -12,8 +11,6 @@ export const PedidosPage = () => {
             <div className="d-flex justify-content-between">
                 <div>
                     <span className={styles.title}>Pedidos (16)</span>
-                    {/* <RxUpdate className={`${styles.title}`} />
-                    <small>25s</small> */}
                 </div>
 
                 <div>

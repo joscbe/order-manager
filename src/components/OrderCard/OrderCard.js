@@ -1,4 +1,4 @@
-import { Button, Col, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import styles from './OrderCard.module.css'
 import { MdAccessTime, MdDeliveryDining, MdOutlineWhatsapp, MdPrint } from "react-icons/md"
 import { BsCash } from "react-icons/bs"
@@ -7,18 +7,20 @@ import { ButtonOrder } from '../ButtonOrder/ButtonOrder'
 
 
 export const OrderCard = ({ variant }) => {
-    let state = '';
+    let state;
 
     switch (variant) {
         case 'wait':
-            state = styles.purple
+            state = styles.purple;
         break;
         case 'preparation':
-            state = styles.green
+            state = styles.green;
         break;
         case 'delivery':
-            state = styles.orange
+            state = styles.orange;
         break;
+        default:
+            state = '';
     }
 
     return (

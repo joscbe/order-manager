@@ -1,0 +1,28 @@
+
+.button {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0 2rem;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+    .button.purple {
+        background-color: var(--purple-color);
+    }
+
+    .button.green {
+        background-color: var(--green-color);
+    }
+
+    .button.orange {
+        background-color: var(--orange-color);
+    }
+
+    .button i {
+        display: flex;
+        font-size: 24px;
+    }

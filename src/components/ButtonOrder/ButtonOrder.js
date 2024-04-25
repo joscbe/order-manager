@@ -2,7 +2,7 @@ import styles from './ButtonOrder.module.css'
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 
-export const ButtonOrder = ({ variant }) => {
+export const ButtonOrder = ({ variant, onclick }) => {
     let estilo;
     let textButton;
 
@@ -25,6 +25,6 @@ export const ButtonOrder = ({ variant }) => {
     }
 
     return (
-        <button className={`${styles.button} ${estilo}`}>{textButton} <i><MdOutlineKeyboardArrowRight /></i></button>
+        <button onClick={onclick} className={`${styles.button} ${estilo}`}>{textButton} <i><MdOutlineKeyboardArrowRight /></i></button>
     )
 }

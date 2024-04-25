@@ -6,7 +6,7 @@ import { IoMdPerson } from "react-icons/io"
 import { ButtonOrder } from '../ButtonOrder/ButtonOrder'
 
 
-export const OrderCard = ({ variant }) => {
+export const OrderCard = ({ order, variant, onclick }) => {
     let state;
 
     switch (variant) {
@@ -26,10 +26,10 @@ export const OrderCard = ({ variant }) => {
     return (
         <div className={`${styles.card} ${state}`}>
             <div className={`${styles.header} d-flex justify-content-between`}>
-                <span>#6154</span>
+                <span>#{order.chatId}</span>
                 <div>
                     <MdAccessTime />
-                    <span>18:51</span>
+                    <span>{String(order.created).substring(11)}</span>
                 </div>
             </div>
 
@@ -49,8 +49,8 @@ export const OrderCard = ({ variant }) => {
                         <div className='d-flex'>
                             <i><BsCash /></i>
                             <div className='d-flex flex-column ms-1'>
-                                <span>R$ 30,27</span>
-                                <small>Cartão de Crédito</small>
+                                <span>{order.price}</span>
+                                <small>{order.typePayment}</small>
                             </div>
                         </div>
                     </Col>
@@ -61,7 +61,7 @@ export const OrderCard = ({ variant }) => {
                         <div className='d-flex align-items-center'>
                             <i><IoMdPerson /></i>
                             <div className='d-flex flex-column ms-1'>
-                                <span>PEDIDO TESTE - Josebe</span>
+                                <span>{order.name}</span>
                             </div>
                         </div>
                     </Col>
@@ -70,7 +70,7 @@ export const OrderCard = ({ variant }) => {
                         <div className='d-flex align-items-center'>
                             <i className='text-success'><MdOutlineWhatsapp /></i>
                             <div className='d-flex flex-column ms-1'>
-                                <span>(11) 95957-2150</span>
+                                <span>{order.phone}</span>
                             </div>
                         </div>
                     </Col>
@@ -80,7 +80,7 @@ export const OrderCard = ({ variant }) => {
             <div className={`${styles.footer} d-flex justify-content-between`}>
                 <i><MdPrint /></i>
 
-                <ButtonOrder variant={variant} />
+                <ButtonOrder onclick={onclick} variant={variant} />
             </div>
         </div>
     )
